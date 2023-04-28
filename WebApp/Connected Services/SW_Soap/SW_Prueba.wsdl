@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetConect">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetConectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateEmpl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellidos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdGenero" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdCiudad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateEmplResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateEmplResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllEmpl">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmplResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmplResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmplResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmplResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVinc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVincResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVincResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateVinc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdEmpleado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaIngreso" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdCargo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaRetiro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FechaRegistro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateVincResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateVincResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllVinc">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllVincResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllVincResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetConectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConect" />
+  </wsdl:message>
+  <wsdl:message name="GetConectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConectResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateEmplSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateEmpl" />
+  </wsdl:message>
+  <wsdl:message name="CreateEmplSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateEmplResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmplSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmpl" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmplSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmplResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpl" />
+  </wsdl:message>
+  <wsdl:message name="GetEmplSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmplResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVincSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVinc" />
+  </wsdl:message>
+  <wsdl:message name="GetVincSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVincResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateVincSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateVinc" />
+  </wsdl:message>
+  <wsdl:message name="CreateVincSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateVincResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllVincSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllVinc" />
+  </wsdl:message>
+  <wsdl:message name="GetAllVincSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllVincResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SW_PruebaSoap">
+    <wsdl:operation name="GetConect">
+      <wsdl:input message="tns:GetConectSoapIn" />
+      <wsdl:output message="tns:GetConectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmpl">
+      <wsdl:input message="tns:CreateEmplSoapIn" />
+      <wsdl:output message="tns:CreateEmplSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmpl">
+      <wsdl:input message="tns:GetAllEmplSoapIn" />
+      <wsdl:output message="tns:GetAllEmplSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpl">
+      <wsdl:input message="tns:GetEmplSoapIn" />
+      <wsdl:output message="tns:GetEmplSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVinc">
+      <wsdl:input message="tns:GetVincSoapIn" />
+      <wsdl:output message="tns:GetVincSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVinc">
+      <wsdl:input message="tns:CreateVincSoapIn" />
+      <wsdl:output message="tns:CreateVincSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllVinc">
+      <wsdl:input message="tns:GetAllVincSoapIn" />
+      <wsdl:output message="tns:GetAllVincSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SW_PruebaSoap" type="tns:SW_PruebaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConect">
+      <soap:operation soapAction="http://tempuri.org/GetConect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmpl">
+      <soap:operation soapAction="http://tempuri.org/CreateEmpl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmpl">
+      <soap:operation soapAction="http://tempuri.org/GetAllEmpl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpl">
+      <soap:operation soapAction="http://tempuri.org/GetEmpl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVinc">
+      <soap:operation soapAction="http://tempuri.org/GetVinc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVinc">
+      <soap:operation soapAction="http://tempuri.org/CreateVinc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllVinc">
+      <soap:operation soapAction="http://tempuri.org/GetAllVinc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SW_PruebaSoap12" type="tns:SW_PruebaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConect">
+      <soap12:operation soapAction="http://tempuri.org/GetConect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEmpl">
+      <soap12:operation soapAction="http://tempuri.org/CreateEmpl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmpl">
+      <soap12:operation soapAction="http://tempuri.org/GetAllEmpl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpl">
+      <soap12:operation soapAction="http://tempuri.org/GetEmpl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVinc">
+      <soap12:operation soapAction="http://tempuri.org/GetVinc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVinc">
+      <soap12:operation soapAction="http://tempuri.org/CreateVinc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllVinc">
+      <soap12:operation soapAction="http://tempuri.org/GetAllVinc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SW_Prueba">
+    <wsdl:port name="SW_PruebaSoap" binding="tns:SW_PruebaSoap">
+      <soap:address location="http://localhost/PruebaTecnica/SW_Prueba.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SW_PruebaSoap12" binding="tns:SW_PruebaSoap12">
+      <soap12:address location="http://localhost/PruebaTecnica/SW_Prueba.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

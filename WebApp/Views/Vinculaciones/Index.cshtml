@@ -1,0 +1,138 @@
+﻿
+@model WebApp.Models.ViewModels.VinculacionesViewModels
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <form method="post">
+        <input type="submit" value="Obtener Vinculaciones" formaction="@Url.Action("GetVinc", "Vinculaciones")" />
+        <input type="button" id="btn_CreateEmpl" value="Crear Vinculacion" />
+    </form>
+    @using (Html.BeginForm("CreateVinc", "Vinculaciones", FormMethod.Post, new { @Id = "FormCreate", @style = "display:none" }))
+    {
+        <div class="container">
+           
+            <div scope="col">
+                <label scope="col">IdEmpleado </label>
+            </div>
+            <div scope="col">
+                @Html.TextBoxFor(m => m.IdEmpleado)
+            </div>
+            <div scope="col" >
+                <label scope="col">FechaIngreso </label>
+
+            </div>
+            <div scope="col">
+
+                @Html.TextBoxFor(m => m.FechaIngreso)
+            </div>
+            <div scope="col">
+                <label>IdCargo </label>
+
+            </div>
+            <div scope="col">
+
+                @Html.TextBoxFor(m => m.IdCargo)
+            </div>
+            <div scope="col">
+                <label>FechaRetiro </label>
+
+            </div>
+            <div scope="col">
+
+                @Html.TextBoxFor(m => m.FechaRetiro)
+            </div>
+            <div scope="col">
+                <label>FechaRegistro </label>
+
+            </div>
+            <div scope="col">
+
+                @Html.TextBoxFor(m => m.FechaRegistro)
+            </div>
+
+            <div scope="col">
+                <br />
+                <input type="submit" value="Crear Vinculacion" />
+            </div>
+
+        </div>
+    }
+
+
+    <div class="container allEmpl">
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+
+        <table class="table">
+            <thead>
+                <tr>
+
+                    @if (Model != null && Model.Items.Count != 0)
+                    {
+                        foreach (var propertyInfo in typeof(WebApp.Models.ViewModels.VinculacionesViewModels).GetProperties())
+                        {
+                            if (propertyInfo.Name != "Items")
+                            {
+                                <th scope="col">@propertyInfo.Name </th>
+                            }
+
+                        }
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Items.Count != 0)
+                {
+                    foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td scope="col">@Html.Raw(item.IdVinculacion)</td>
+                            <td scope="col">@Html.Raw(item.IdEmpleado)</td>
+                            <td scope="col">@Html.Raw(item.FechaIngreso.ToString("dd/MM/yyyy"))</td>
+                            <td scope="col">@Html.Raw(item.IdCargo)</td>
+                            <td scope="col">@Html.Raw(item.FechaRetiro.ToString("dd/MM/yyyy"))</td>
+                            <td scope="col">@Html.Raw(item.FechaRetiro.ToString("dd/MM/yyyy"))</td>
+                          
+                        </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $("#btn_CreateEmpl").click(function () {
+            $(this).hide();
+            $("#FechaIngreso").val("");
+            $("#FechaRetiro").val("");
+            $("#FechaRegistro").val("");
+            $("#FormCreate").show();
+            $(".allEmpl").hide();
+
+
+        });
+    });
+</script>
+
+

@@ -1,0 +1,19 @@
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\bin\PruebaTecnica.dll.config
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\bin\PruebaTecnica.dll
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\bin\PruebaTecnica.pdb
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.csproj.CoreCompileInputs.cache
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.dll
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.pdb
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.csproj.AssemblyReference.cache
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\bin\Newtonsoft.Json.dll
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\bin\Newtonsoft.Json.xml
+C:\Users\Juan Woo\source\repos\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.csproj.CopyComplete
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\bin\PruebaTecnica.dll.config
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\bin\PruebaTecnica.dll
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\bin\PruebaTecnica.pdb
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\bin\Newtonsoft.Json.dll
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\bin\Newtonsoft.Json.xml
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.dll
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.pdb
+C:\Users\User\Desktop\PruebaTecnica21\PruebaTecnica\PruebaTecnica\obj\Debug\PruebaTecnica.csproj.CopyComplete

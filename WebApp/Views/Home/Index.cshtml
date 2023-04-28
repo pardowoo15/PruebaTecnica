@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>WebApp</h1>
+    <p class="lead">Use el menú de navegación  o los botones a continuación para acceder a las funcionalidades de la WebApp  </p>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>EMPLEADOS</h2>
+        <p>
+            Aquí podrá ver todos los empleados creados en el sistema
+        </p>
+        @Html.ActionLink("Empleados", "Index", "Empleados",new { }, new { @class = "btn btn-primary" })
+
+
+    </div>
+    <div class="col-md-6">
+        <h2>VINCULACIONES</h2>
+        <p>Aquí podrá ver todas las vinculaciones creadas en el sistema </p>
+        @Html.ActionLink("Vinculaciones", "Index", "Vinculaciones",new { },new {@class= "btn btn-primary" })
+    </div>
+   
+</div>
